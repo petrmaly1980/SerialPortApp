@@ -41,6 +41,8 @@
             this.souborToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.version11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonUnlockCommand = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +75,7 @@
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxOutput.Size = new System.Drawing.Size(660, 304);
+            this.textBoxOutput.Size = new System.Drawing.Size(544, 304);
             this.textBoxOutput.TabIndex = 2;
             // 
             // textBoxCommand
@@ -140,7 +142,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(733, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(910, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -162,14 +164,35 @@
             // version11ToolStripMenuItem
             // 
             this.version11ToolStripMenuItem.Name = "version11ToolStripMenuItem";
-            this.version11ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.version11ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.version11ToolStripMenuItem.Text = "Version 1.1";
+            // 
+            // buttonUnlockCommand
+            // 
+            this.buttonUnlockCommand.Location = new System.Drawing.Point(122, 104);
+            this.buttonUnlockCommand.Name = "buttonUnlockCommand";
+            this.buttonUnlockCommand.Size = new System.Drawing.Size(140, 23);
+            this.buttonUnlockCommand.TabIndex = 11;
+            this.buttonUnlockCommand.Text = "Send UnlockCommand";
+            this.buttonUnlockCommand.UseVisualStyleBackColor = true;
+            this.buttonUnlockCommand.Click += new System.EventHandler(this.buttonUnlockCommand_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(268, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "*UC89C7";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 464);
+            this.ClientSize = new System.Drawing.Size(910, 464);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.buttonUnlockCommand);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonDisconnect);
@@ -205,6 +228,8 @@
         private System.Windows.Forms.ToolStripMenuItem souborToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem version11ToolStripMenuItem;
+        private System.Windows.Forms.Button buttonUnlockCommand;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -99,5 +99,18 @@ namespace SerialPortApp
         {
 
         }
+
+        private void buttonUnlockCommand_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("*UC89C7");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
