@@ -99,7 +99,19 @@ namespace SerialPortApp
         {
 
         }
-
+        private void buttonSPdiagnostic_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("*SP");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "*SP";
+            }
+        }
         private void buttonUnlockCommand_Click(object sender, EventArgs e)
         {
             if (serialPort != null && serialPort.IsOpen)
@@ -110,7 +122,13 @@ namespace SerialPortApp
             else
             {
                 MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "*UC89C7";
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -42,7 +42,10 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.version11ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonUnlockCommand = new System.Windows.Forms.Button();
+            this.buttonSpDiagnosticCommand = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,22 +70,21 @@
             // 
             // textBoxOutput
             // 
-            this.textBoxOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOutput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxOutput.Location = new System.Drawing.Point(41, 134);
+            this.textBoxOutput.Location = new System.Drawing.Point(41, 135);
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxOutput.Size = new System.Drawing.Size(544, 304);
+            this.textBoxOutput.Size = new System.Drawing.Size(544, 303);
             this.textBoxOutput.TabIndex = 2;
             // 
             // textBoxCommand
             // 
             this.textBoxCommand.Location = new System.Drawing.Point(41, 78);
             this.textBoxCommand.Name = "textBoxCommand";
-            this.textBoxCommand.Size = new System.Drawing.Size(544, 20);
+            this.textBoxCommand.Size = new System.Drawing.Size(527, 20);
             this.textBoxCommand.TabIndex = 3;
             this.textBoxCommand.Text = "*SP";
             // 
@@ -90,7 +92,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(591, 75);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 23);
+            this.button1.Size = new System.Drawing.Size(201, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Send Command";
             this.button1.UseVisualStyleBackColor = true;
@@ -117,9 +119,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(555, 42);
+            this.button3.Location = new System.Drawing.Point(591, 40);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 23);
+            this.button3.Size = new System.Drawing.Size(201, 23);
             this.button3.TabIndex = 7;
             this.button3.Text = "Device Manager";
             this.button3.UseVisualStyleBackColor = true;
@@ -127,9 +129,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(41, 105);
+            this.button2.Location = new System.Drawing.Point(41, 106);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(85, 23);
             this.button2.TabIndex = 9;
             this.button2.Text = "clearOutputButton";
             this.button2.UseVisualStyleBackColor = true;
@@ -169,29 +171,62 @@
             // 
             // buttonUnlockCommand
             // 
-            this.buttonUnlockCommand.Location = new System.Drawing.Point(122, 104);
+            this.buttonUnlockCommand.Location = new System.Drawing.Point(591, 163);
             this.buttonUnlockCommand.Name = "buttonUnlockCommand";
-            this.buttonUnlockCommand.Size = new System.Drawing.Size(140, 23);
+            this.buttonUnlockCommand.Size = new System.Drawing.Size(201, 23);
             this.buttonUnlockCommand.TabIndex = 11;
-            this.buttonUnlockCommand.Text = "Send UnlockCommand";
+            this.buttonUnlockCommand.Text = "Send Unlock Command *UC89C7";
             this.buttonUnlockCommand.UseVisualStyleBackColor = true;
             this.buttonUnlockCommand.Click += new System.EventHandler(this.buttonUnlockCommand_Click);
+            // 
+            // buttonSpDiagnosticCommand
+            // 
+            this.buttonSpDiagnosticCommand.Location = new System.Drawing.Point(591, 135);
+            this.buttonSpDiagnosticCommand.Name = "buttonSpDiagnosticCommand";
+            this.buttonSpDiagnosticCommand.Size = new System.Drawing.Size(201, 23);
+            this.buttonSpDiagnosticCommand.TabIndex = 11;
+            this.buttonSpDiagnosticCommand.Text = "Send SP Diagnostic Command *SP";
+            this.buttonSpDiagnosticCommand.UseVisualStyleBackColor = true;
+            this.buttonSpDiagnosticCommand.Click += new System.EventHandler(this.buttonSPdiagnostic_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(591, 192);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(201, 23);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Send Calibrate Command *CR";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(268, 109);
+            this.label2.Location = new System.Drawing.Point(569, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "*UC89C7";
+            this.label2.Size = new System.Drawing.Size(16, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "<-";
+            // 
+            // button5
+            // 
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button5.Location = new System.Drawing.Point(591, 221);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(201, 23);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "Open Calibration Procedure";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 464);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buttonSpDiagnosticCommand);
             this.Controls.Add(this.buttonUnlockCommand);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -229,7 +264,10 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem version11ToolStripMenuItem;
         private System.Windows.Forms.Button buttonUnlockCommand;
+        private System.Windows.Forms.Button buttonSpDiagnosticCommand;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button5;
     }
 }
 
