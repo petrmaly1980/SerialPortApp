@@ -90,5 +90,14 @@ namespace SerialPortApp
         {
             Process.Start("devmgmt.msc");
         }
+        private void clearOutputButton_Click(object sender, EventArgs e)
+        {
+            textBoxOutput.Clear();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
