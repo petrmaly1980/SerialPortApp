@@ -195,5 +195,18 @@ namespace SerialPortApp
                 MessageBox.Show("Složka neexistuje: " + folderPath, "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void textBoxOutput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void version11ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // https://github.com/petrmaly1980/SerialPortApp
+
+            System.Diagnostics.Process.Start("https://github.com/petrmaly1980/SerialPortApp");
+
+        }
     }
 }
