@@ -20,6 +20,7 @@ namespace SerialPortApp
             InitializeComponent();
             InitializeLogging();
             LoadAvailablePorts();
+            InitializeDataGridView();
             buttonDisconnect.Enabled = false;
         }
         private void LoadAvailablePorts()
@@ -108,6 +109,20 @@ namespace SerialPortApp
             {
                 textBoxOutput.AppendText(data + "\n");
                 AppendToLog(data);  // Automatické logování přijatých dat
+
+                // Rozdělení dat podle středníku
+                string[] values = data.Split(';');
+
+                // Kontrola, zda máme přesně 11 hodnot
+                if (values.Length == 11)
+                {
+                    // Přidání nové řádky do DataGridView
+                    dataGridView1.Rows.Add(values);
+                }
+                else
+                {
+                    MessageBox.Show("Neplatný formát dat. Očekává se 11 hodnot oddělených středníkem.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }));
         }
 
@@ -195,5 +210,16 @@ namespace SerialPortApp
                 MessageBox.Show("Složka neexistuje: " + folderPath, "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void InitializeDataGridView()
+        {
+            // Definice sloupců DataGridView
+            dataGridView1.ColumnCount = 11; // 1 sloupec pro ID a 10 pro hodnoty
+            dataGridView1.Columns[0].Name = "ID";
+            for (int i = 1; i <= 10; i++)
+            {
+                dataGridView1.Columns[i].Name = $"Hodnota {i}";
+            }
+        }
+
     }
 }

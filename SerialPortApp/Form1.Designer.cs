@@ -48,7 +48,9 @@
             this.buttonCalibration = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonOpenTempFolder = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxPorts
@@ -79,7 +81,7 @@
             this.textBoxOutput.Multiline = true;
             this.textBoxOutput.Name = "textBoxOutput";
             this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxOutput.Size = new System.Drawing.Size(544, 303);
+            this.textBoxOutput.Size = new System.Drawing.Size(544, 117);
             this.textBoxOutput.TabIndex = 2;
             // 
             // textBoxCommand
@@ -146,7 +148,7 @@
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(910, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 24);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -239,11 +241,20 @@
             this.buttonOpenTempFolder.UseVisualStyleBackColor = true;
             this.buttonOpenTempFolder.Click += new System.EventHandler(this.buttonOpenTempFolder_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(41, 298);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1014, 150);
+            this.dataGridView1.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 464);
+            this.ClientSize = new System.Drawing.Size(1067, 527);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonOpenTempFolder);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonCalibration);
@@ -266,6 +277,7 @@
             this.Text = "SerialPortApp";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +305,7 @@
         private System.Windows.Forms.Button buttonCalibration;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonOpenTempFolder;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
