@@ -45,7 +45,9 @@
             this.buttonSpDiagnosticCommand = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.buttonCalibration = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonOpenTempFolder = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,7 +173,7 @@
             // 
             // buttonUnlockCommand
             // 
-            this.buttonUnlockCommand.Location = new System.Drawing.Point(591, 163);
+            this.buttonUnlockCommand.Location = new System.Drawing.Point(591, 171);
             this.buttonUnlockCommand.Name = "buttonUnlockCommand";
             this.buttonUnlockCommand.Size = new System.Drawing.Size(201, 23);
             this.buttonUnlockCommand.TabIndex = 11;
@@ -181,7 +183,7 @@
             // 
             // buttonSpDiagnosticCommand
             // 
-            this.buttonSpDiagnosticCommand.Location = new System.Drawing.Point(591, 135);
+            this.buttonSpDiagnosticCommand.Location = new System.Drawing.Point(591, 143);
             this.buttonSpDiagnosticCommand.Name = "buttonSpDiagnosticCommand";
             this.buttonSpDiagnosticCommand.Size = new System.Drawing.Size(201, 23);
             this.buttonSpDiagnosticCommand.TabIndex = 11;
@@ -191,7 +193,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(591, 192);
+            this.button4.Location = new System.Drawing.Point(591, 200);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(201, 23);
             this.button4.TabIndex = 12;
@@ -207,23 +209,44 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "<-";
             // 
-            // button5
+            // buttonCalibration
             // 
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(591, 221);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(201, 23);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Open Calibration Procedure";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.buttonCalibration.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonCalibration.Location = new System.Drawing.Point(591, 229);
+            this.buttonCalibration.Name = "buttonCalibration";
+            this.buttonCalibration.Size = new System.Drawing.Size(201, 23);
+            this.buttonCalibration.TabIndex = 14;
+            this.buttonCalibration.Text = "Open Calibration Procedure PDF";
+            this.buttonCalibration.UseVisualStyleBackColor = true;
+            this.buttonCalibration.Click += new System.EventHandler(this.buttonCalibration_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(340, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(245, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Output is automaticaly saved to  the same C:\\temp";
+            // 
+            // buttonOpenTempFolder
+            // 
+            this.buttonOpenTempFolder.Location = new System.Drawing.Point(591, 114);
+            this.buttonOpenTempFolder.Name = "buttonOpenTempFolder";
+            this.buttonOpenTempFolder.Size = new System.Drawing.Size(112, 23);
+            this.buttonOpenTempFolder.TabIndex = 16;
+            this.buttonOpenTempFolder.Text = "OpenTempFolder";
+            this.buttonOpenTempFolder.UseVisualStyleBackColor = true;
+            this.buttonOpenTempFolder.Click += new System.EventHandler(this.buttonOpenTempFolder_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(910, 464);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.buttonOpenTempFolder);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.buttonCalibration);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.buttonSpDiagnosticCommand);
@@ -267,7 +290,9 @@
         private System.Windows.Forms.Button buttonSpDiagnosticCommand;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button buttonCalibration;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonOpenTempFolder;
     }
 }
 
