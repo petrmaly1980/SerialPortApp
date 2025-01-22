@@ -73,6 +73,8 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -389,7 +391,7 @@
             // version11ToolStripMenuItem
             // 
             this.version11ToolStripMenuItem.Name = "version11ToolStripMenuItem";
-            this.version11ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.version11ToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.version11ToolStripMenuItem.Text = "Version 1.2 b";
             this.version11ToolStripMenuItem.Click += new System.EventHandler(this.version11ToolStripMenuItem_Click);
             // 
@@ -465,11 +467,31 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 53;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(542, 581);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 13);
+            this.label18.TabIndex = 86;
+            this.label18.Text = "Winning number";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(545, 597);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.ReadOnly = true;
+            this.textBox17.Size = new System.Drawing.Size(100, 20);
+            this.textBox17.TabIndex = 85;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 636);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.textBox17);
             this.Controls.Add(this.textBoxOutput);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
@@ -568,6 +590,8 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox17;
     }
 }
 

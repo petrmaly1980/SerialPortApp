@@ -208,5 +208,10 @@ namespace SerialPortApp
             System.Diagnostics.Process.Start("https://github.com/petrmaly1980/SerialPortApp");
 
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
