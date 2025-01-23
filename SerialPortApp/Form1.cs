@@ -121,6 +121,7 @@ namespace SerialPortApp
                 }
                 else
                 {
+                    MessageBox.Show("Počet prvků v poli: " + values.Length.ToString());
                     MessageBox.Show("Neplatný formát dat. Očekává se 11 hodnot oddělených středníkem.", "Chyba", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }));
@@ -213,13 +214,123 @@ namespace SerialPortApp
         private void InitializeDataGridView()
         {
             // Definice sloupců DataGridView
-            dataGridView1.ColumnCount = 11; // 1 sloupec pro ID a 10 pro hodnoty
+            dataGridView1.ColumnCount = 12; // 1 sloupec pro ID a 10 pro hodnoty
             dataGridView1.Columns[0].Name = "ID";
-            for (int i = 1; i <= 10; i++)
+            dataGridView1.Columns[1].Name = "*X";
+            dataGridView1.Columns[2].Name = "GameState";
+            dataGridView1.Columns[3].Name = "GameNumber";
+            dataGridView1.Columns[4].Name = "LastWinningNumber";
+            dataGridView1.Columns[5].Name = "WarningFlag";
+            dataGridView1.Columns[6].Name = "RotorSpeed";
+            dataGridView1.Columns[7].Name = "RotorDirection";
+            dataGridView1.Columns[8].Name = "IssueSum";
+            dataGridView1.Columns[9].Name = "BallSpins";
+            dataGridView1.Columns[10].Name = "BallInPocket";
+            dataGridView1.Columns[11].Name = "RandomBS";
+
+
+            //for (int i = 1; i <= 10; i++)
+            //{
+            //    dataGridView1.Columns[i].Name = $"Hodnota {i}";
+            //}
+        }
+
+        private void buttonCalibrateCommand_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
             {
-                dataGridView1.Columns[i].Name = $"Hodnota {i}";
+                serialPort.WriteLine("*CR");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "*CR";
             }
         }
 
+        private void buttonCDcommand_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("*CD");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "*CD";
+            }
+        }
+
+        private void buttonUR5H44Command_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("*UR5H44");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "*UR5H44";
+            }
+        }
+
+        private void button0_U0359Command_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("0*U0359");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "0*U0359";
+            }
+        }
+
+        private void button1_U0359Command_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("1*U0359");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "1*U0359";
+            }
+        }
+
+        private void button2_U0359Command_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("2*U0359");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "2*U0359";
+            }
+        }
+
+        private void button3_U0359Command_Click(object sender, EventArgs e)
+        {
+            if (serialPort != null && serialPort.IsOpen)
+            {
+                serialPort.WriteLine("3*U0359");
+                //textBoxCommand.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Port is not open.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCommand.Text = "3*U0359";
+            }
+        }
     }
 }
